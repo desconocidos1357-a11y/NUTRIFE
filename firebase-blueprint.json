@@ -1,0 +1,32 @@
+{
+  "entities": {
+    "recipe": {
+      "title": "Receta NutriFe",
+      "description": "Una receta de alimentación complementaria rica en hierro para niños.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Nombre de la receta" },
+        "age": { "type": "string", "description": "Rango de edad, e.g., '6_meses', '7_8_meses', '9_11_meses', '12_23_meses', '2_5_anos'" },
+        "ingredients": { "type": "string", "description": "Ingredientes detallados de la receta" },
+        "preparation": { "type": "string", "description": "Instrucciones paso a paso para preparar la receta" },
+        "portionSize": { "type": "string", "description": "Tamaño de porción recomendado para la edad" },
+        "texture": { "type": "string", "description": "Textura recomendada (papilla, puré, picado, etc.)" },
+        "nutritionalBenefits": { "type": "string", "description": "Beneficios nutricionales, especialmente contra la anemia" },
+        "ironRichIngredients": { "type": "string", "description": "Ingredientes principales ricos en hierro" },
+        "prepTime": { "type": "string", "description": "Tiempo de preparación en minutos" },
+        "cookTime": { "type": "string", "description": "Tiempo de cocción en minutos" },
+        "difficulty": { "type": "string", "description": "Nivel de dificultad (Fácil, Medio, Difícil)" },
+        "imageUrl": { "type": "string", "description": "URL de la imagen de la receta" },
+        "videoUrl": { "type": "string", "description": "URL del video explicativo de YouTube" },
+        "qrUrl": { "type": "string", "description": "URL o datos para generar un código QR de la receta" }
+      },
+      "required": ["name", "age", "ingredients", "preparation"]
+    }
+  },
+  "firestore": {
+    "/recipes/{recipeId}": {
+      "schema": "recipe",
+      "description": "Base de datos global de recetas de alimentación complementaria NutriFe"
+    }
+  }
+}

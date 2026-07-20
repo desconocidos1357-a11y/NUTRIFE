@@ -1,0 +1,6 @@
+{
+  "name": "NutriFe",
+  "description": "Recetas y guía de alimentación complementaria rica en hierro para niños de 6 meses a 5 años, enfocada en la prevención de la anemia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
